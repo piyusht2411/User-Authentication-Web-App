@@ -1,27 +1,32 @@
 <html>
-    <head>
-        <div class="abcde" id="abcde">
-            <div class="Fresh Mango" onClick="MyNavigation();"></div>
-            
 
-        <title> <%= title%></title>
-          <link rel="stylesheet" type="text/css" href="style.css">
-        <body>
-            <div class="loginbox">
-                <img src="pic2.png" class="avatar">
-                <h1>Log In</h1>
-                <form action="/users/create-session" method="post"></form>
-                    <p>Email</p>
-                    <input type="text" name="" placeholder="Enter Your Email">
-                    <p>Password</p>
-                    <input type = "password" placeholder="Enter your Password">
-                    <input type="Submit" name="" value="Login">
-                    <a href="#">Forgot Passowrd?</a><br>
-                    <a href="#"> Don't have an account?</a>
-                </form>
-                
-            </div>
+<head>
+    <div class="abcde" id="abcde">
+        <div class="Fresh Mango" onClick="MyNavigation();"></div>
 
-        </body>
-    </head>
+
+        <title>
+            <%= title%>
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+    <div class="loginbox">
+        <img src="pic2.png" class="avatar">
+        <h1>Log In</h1>
+        <form action="/users/create-session" method="post"></form>
+        <p>Email</p>
+        <input type="text" name="" placeholder="Enter Your Email">
+        <p>Password</p>
+        <input type="password" placeholder="Enter your Password">
+        <input type="Submit" name="" value="Login">
+        <a href="#">Forgot Passowrd?</a><br>
+        <a href="#"> Don't have an account?</a>
+        </form>
+
+    </div>
+
+</body>
+</head>
+
 </html>
