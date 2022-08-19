@@ -15,10 +15,10 @@ module.exports.sign_up = function(req,resp){
     })
 }
 
-// module.exports.create = function(req,resp){
+module.exports.create = function(req,resp){
     
 
-// }
-// module.exports.createSession = function(req,resp){
+}
+module.exports.createSession = function(req,resp){
     
-// }
+}

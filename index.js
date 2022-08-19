@@ -1,12 +1,13 @@
 const express = require('express');
+const db = require('./config/mongoose');
 const cookieParser = require('cookie-parser');
 
 const app = express();
 const port = 8000;
 app.use(express.urlencoded);
-// app.use(cookieParser());
+app.use(cookieParser());
 
-// app.use(express.static('./assets'));
+app.use(express.static('./assets'));
 
 
 app.use('/', require('./routes'));
