@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%title%></title>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form action="/users/create" method="post">
+        <label for="name">Name</label><input type="text" name="name" id="" placeholder="Enter Your name" required>
+        <label for="email">E-mail</label> <input type="email" name="email" id="" placeholder="Enter your email" required>
+        <label for="password">Password</label> <input type="password" name="password" id="" placeholder="Enter your password" required>
+        <label for="Confirm password">Confirm Password</label> <input type="password" name="confire_password" id="" placeholder="Confirm your password" required>
+        <input type="submit" value="Sign up">
+    </form>
+</body>
+</html>
