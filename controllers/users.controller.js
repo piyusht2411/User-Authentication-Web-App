@@ -1,9 +1,22 @@
 const User = require('../models/user');
 
 module.exports.profile = function (req, resp) {
-    resp.render('user_profile', {
-        title: "profile"
-    });
+    if(req.cookies.user_id){
+        User.findById(req.cookies.user_id, function(err,user){
+            if(user){
+                return resp.render('user_profile', {
+                    title:"User profile",
+                    user:user
+                })
+            }
+            return resp.redirect('/users/sign-in');
+            
+        });
+
+    }
+    else{
+        return resp.redirect('/users/sign-in');
+    }
 }
 
 module.exports.signup = function (req, resp) {
@@ -46,7 +59,7 @@ module.exports.creteSession = function (req, resp) {
                 return resp.redirect('back');
             }
             resp.cookie('user_id', user.id);
-            return resp.redirect('/users/profile')
+            return resp.redirect('/users/profile');
         }
         else {
             return resp.redirect('back');
