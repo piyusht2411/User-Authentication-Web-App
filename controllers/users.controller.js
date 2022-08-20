@@ -7,11 +7,19 @@ module.exports.profile = function(req,resp){
 }
 
 module.exports.signup = function(req,resp){
+    if(req.isAuthenticated()){
+        return resp.redirect('/users/profile');
+    }
+
     resp.render('user_signUp', {
         title: "Social chat | Sign Up"
     })
 }
 module.exports.signIn = function(req,resp){
+    if(req.isAuthenticated()){
+        return resp.redirect('/users/profile');
+    }
+
     resp.render('user_signIn', {
         title: "Social chat | Sign In"
     })
