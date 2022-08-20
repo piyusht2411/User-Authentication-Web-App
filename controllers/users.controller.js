@@ -36,3 +36,7 @@ module.exports.create = function(req,resp){
     });
 }
 
+module.exports.createSession = function(req,resp){
+    return resp.redirect('/');
+}
+
