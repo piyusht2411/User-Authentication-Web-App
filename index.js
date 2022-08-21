@@ -5,6 +5,7 @@ const port = 8000;
 const db = require('./config/mongoose');
 const session = require('express-session');
 const passport = require('passport');
+const expressLayout = require('express-ejs-layouts');
 const passportLocal = require('./config/passport-local');
 const MongoStore = require('connect-mongo')(session);
 
