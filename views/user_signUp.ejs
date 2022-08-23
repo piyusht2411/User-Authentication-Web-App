@@ -7,6 +7,11 @@
     <title><%=title%></title>
 </head>
 <body>
+    <% if(flash.success && flash.success.length > 0){ %>
+        <h5>
+            <%= flash.success %>
+        </h5>    
+    <% } %>
     <h1>Sign Up</h1>
     <form action="/users/create" method="post">
         <label for="name">Name</label> <input type="text" name="name" placeholder="Enter Your name">
