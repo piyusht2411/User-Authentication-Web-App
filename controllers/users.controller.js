@@ -35,6 +35,7 @@ module.exports.create = function(req,resp){
         if(!user){
             User.create(req.body, function(err, user){
                 if(err){ console.log('error in creating for signing up'); return}
+                req.flash('success', 'Sign Up Successfully');
                 return resp.redirect('/users/sign-in');
             })
         }
@@ -45,14 +46,14 @@ module.exports.create = function(req,resp){
 }
 
 module.exports.createSession = function(req,resp){
-    req.flash('success', 'Logged in Successfully');
+    req.flash('success', 'Sign In Successfully');
     return resp.redirect('/');
 }
 
 module.exports.destroySession = function(req, resp, next){
 req.logout(function(err) {
     if (err) { return next(err); }
-    req.flash('success', 'You have logged out!');
+    req.flash('success', 'You have Sign Out!');
     return resp.redirect('/');
   });
 };
