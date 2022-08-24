@@ -8,7 +8,7 @@ router.get('/profile',passport.checkAuthentication, user_contrller.profile);
 router.get('/sign-in', user_contrller.signIn);
 router.get('/sign-up', user_contrller.signup);
 router.post('/create', user_contrller.create);
-router.post('/create-session',passport.authenticate(
+router.post('/create-session', passport.authenticate(
     'local',
     {failureRedirect:'/users/sign-in'}
 ), user_contrller.createSession);

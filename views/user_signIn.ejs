@@ -8,20 +8,26 @@
     <title>
         <%=title%>
     </title>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
 </head>
 </head>
 
 <body>
-    <h1>Sign In</h1>
-    <form action="/users/create-session" method="post">
-
-        <label for="Email">E-mail</label><input type="email" name="email" placeholder="Enter your Email">
-        <label for="password">Password</label> <input type="password" name="password" placeholder="Enter password">
-        <input type="submit" value="Sign In">
-
-    </form>
+    <div class="loginbox">
+        <img src="/images/pic2.png" class="avatar">
+        <h1>Sign In</h1>
+        <form action="/users/create-session" method="post">
+            <p>Email</p>
+            <input type="text" name="email" placeholder="Enter Your Email">
+            <p>Password</p>
+            <input type = "password" name="password" placeholder="Enter your Password">
+            <input type="Submit" value="Sign In">
+            <!-- <a href="#">Forgot Passowrd?</a><br> -->
+            <a href="/users/sign-up"> Don't have an account?</a>
+        </form>
+        
     <script>
         <% if (flash.success && flash.success.length > 0) {%>
             new Noty({
