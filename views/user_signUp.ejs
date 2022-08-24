@@ -12,10 +12,12 @@
     <h1>Sign Up</h1>
     <form action="/users/create" method="post">
         <label for="name">Name</label> <input type="text" name="name" placeholder="Enter Your name">
+        <label for="number">Phone No.</label> <input type="number" name="phone" placeholder="Enter your phone number">
         <label for="Email">E-mail</label><input type="email" name="email" placeholder="Enter your Email">
         <label for="password">Password</label> <input type="password" name="password" placeholder="Enter password">
         <label for="ConfirmPassword">Confirm Password</label> <input type="password" name="ConfirmPassword" placeholder="Enter password">
         <input type="submit" value="Sign Up">
+        <a href="/users/sign-in"> Already have an account?</a>
     </form>
     <script>
         <% if (flash.success && flash.success.length > 0) {%>
